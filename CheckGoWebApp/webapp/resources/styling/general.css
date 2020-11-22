@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+*{
+
+	/*para test de la ui*/
+	border-color: magenta;
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	
+	--dark-color: #404040;
+	--light-color: #ffffff;
+	--background-color: #E6E6E6;
+	--primary-color: #1B365D;
+	--secondary-color: #FFCD00;
+	--primary-light-color:#4D6180;
+	--good-status-color: #6CD96C;
+	--alert-status-color: #FFCD00;
+	--bad-status-color: #D96C6C;
+	--shadow-style: 0 4px 1.5em  rgba(0,0,0, 0.3);
+
+	background-color: var(--background-color);
+	color: var(--dark-color);
+	font-size: 16px;
+
+}
+
+@media(min-width: 900px){
+	.log-in-layout{
+	grid-template-columns: 2fr 3fr 2fr;
+	grid-template-rows: 1fr 4fr 1fr;
+
+	}
+
+	.card{
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 2fr;
+	}
+
+	.log-in-form{
+	grid-template-columns: 2em auto 2em;
+	grid-template-rows: 3em 3em 3em auto 3em;
+	}
+}
+
+@media(min-width: 1300px){
+	.log-in-layout{
+	grid-template-columns: 4fr 3fr 4fr;
+	grid-template-rows: 1fr 4fr 1fr;
+
+	}
+
+	.card{
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 2fr;
+	}
+
+	.log-in-form{
+	grid-template-columns: 2em auto 2em;
+	grid-template-rows: 3em 3em 3em auto 3em;
+	}
+}
+
+.log-in-layout{
+
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	
+
+	grid-template-areas: 
+	". . ."
+	". card ."
+	". . .";
+
+	}
+
+	.card{
+	grid-area: card;
+	display: grid;
+	grid-template-areas: 
+	"title "
+	"content";
+
+	background-color: var(--light-color);
+	
+	border-radius: 2em;
+
+	}
+
+	.log-in-form{
+	display: grid;
+	grid-area: content;
+	grid-row-gap: 2em;
+	grid-template-areas:
+	". input-legend ." 
+	". id-input ."
+	". password-input ."
+	". . ."
+	"action-area action-area action-area"
+	}
+
+
+.log-card{
+	box-shadow: var(--shadow-style);
+}
+
+
+
+.brand-name{
+	text-transform: uppercase;
+	font-size: 3.5em;
+	font-weight: 700;
+
+}
+
+.brand-title{
+	margin: auto;
+}
+
+.brand-first{
+	color: var(--primary-color);
+}
+
+.brand-second{
+	color: var(--secondary-color);
+}
+
+
+
+.card-title{
+	grid-area: title;
+}
+
+.input-legend{
+	grid-area: input-legend;
+	font-weight: 700;
+	font-size: 2em;
+}
+
+.input{
+	grid-area: fill-content;
+	border-radius: 2em;
+	border: none;
+	background-color: var(--background-color);
+	height: 3em;
+	text-align: center;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.input:focus{
+	box-shadow: var(--shadow-style);
+	font-weight: 700;
+	border:2px solid var(--dark-color);
+
+}
+
+.input:hover{
+	box-shadow: var(--shadow-style);
+	border:2px solid var(--dark-color);
+	
+}
+
+::placeholder{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	text-transform: initial;
+	
+	color: var(--dark-color);
+	opacity: 1;
+}
+
+.id-input{
+	grid-area: id-input;
+}
+
+.password-input{
+	grid-area: password-input;
+}
+
+.card-buton{
+	grid-area: action-area;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-color);
+	color: var(--light-color);
+	font-weight: 700;
+	border-radius: 0 0 2em 2em;
+	
+}
+
+.card-buton:hover{
+	border: none;
+	background-color: var(--secondary-color);
+	color: var(--dark-color);
+		
+}

@@ -1,0 +1,92 @@
+.card-div{
+	box-sizing: border-box;
+	background-color: var(--light-color);
+	border-radius: 1.5em;
+	width: 32em;
+	height: auto;
+	margin-bottom: 2em;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto 3em;
+	grid-template-areas:
+	"card-head"
+	"card-content"
+	"card-footer";
+
+}
+
+.card-head{
+	grid-area: card-head;
+	padding: 2em 2em 1em 2em;
+	text-align: right;
+}
+
+.card-title{
+	font-size: 2.5em;
+	text-transform: uppercase;
+}
+
+.card-status{
+	font-weight: normal;
+	text-transform: capitalize;
+	font-size: 1.25em;
+}
+
+.good-status{
+	color: var(--good-status-color);
+}
+.card-content{
+	padding: 1em 2em 1em 2em;
+	grid-area: card-content;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-content-row{
+	display: grid;
+	margin-bottom: 1em;
+	grid-column-gap: 1em;
+	grid-template-columns: 3em auto;
+	grid-template-rows: 3em auto;
+	grid-template-areas:
+	"content-icon text"
+	". text";
+}
+
+
+.icon-div{
+	grid-area: content-icon;
+}
+
+.card-text-area{
+	background-color: var(--background-color);
+	padding: 0.8em 1.5em 0.2em 1.5em;
+	border-radius: 1.5em;
+	grid-area: text;
+	min-height: 2em;
+}
+p{
+	padding-bottom: 0.5em;
+}
+
+.card-footer{
+	grid-area: card-footer;
+}
+
+.card-button-single{
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 0 0 1.5em 1.5em;
+	background-color: var(--primary-color);
+	color: var(--light-color);
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+
+
+.card-button-single:hover{
+	background-color: var(--primary-light-color);
+	transition: background-color 0.5s;
+}

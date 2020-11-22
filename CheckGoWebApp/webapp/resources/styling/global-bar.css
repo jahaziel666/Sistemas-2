@@ -1,0 +1,63 @@
+.global-bar-container{
+	background-color: var(--light-color);
+	height: 100%;
+	width: 100%;
+	grid-area: global-bar;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas:
+	"brand action user"
+}
+
+.global-brand-container{
+	grid-area: brand;
+	margin: auto auto auto 3em;
+
+}
+
+.global-action-container{
+	grid-area: action;
+	margin: auto 0;
+	
+}
+
+.global-button{
+	width: 100%;
+	background-color: var(--secondary-color);
+	text-transform: uppercase;
+	border-radius: 4em;
+}
+
+.global-button:hover{
+	box-shadow: var(--shadow-style);
+	transition: box-shadow 0.25s;
+}
+
+.global-button:active{
+	background-color: var(--light-color);
+}
+
+.global-user-container{
+	grid-area: user;
+	margin: auto 3em auto auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+
+}
+
+
+.selected{
+	background-color: var(--secondary-color);
+}
+
+.option{
+	background-color: var(--primary-light-color);
+	color: var(--light-color);
+}
+
+.div-centered{
+	margin: auto;
+}
